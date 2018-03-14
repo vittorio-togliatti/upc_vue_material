@@ -12,7 +12,7 @@
 //          }
 //        });
 
-Vue.material.setCurrentTheme('about');
+//Vue.material.setCurrentTheme('about');
 
 
 function init(){

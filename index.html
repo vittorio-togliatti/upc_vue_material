@@ -2,14 +2,14 @@
 <html>
   <head>
    
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;font-src 'self' 'unsafe-inline' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 		
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
-    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default.css">
+    <link rel="stylesheet" href="libs/roboto.css">
+    <link rel="stylesheet" href="libs/vuematerial.css">
+    <link rel="stylesheet" href="libs/vuethemedefault.css">
       
     
       
@@ -79,9 +79,9 @@
 		<script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 		
-		<script src="https://unpkg.com/vue"></script>
+		<script src="libs/vue.js"></script>
 		<script src="js/vue-router.js"></script>
-		<script src="https://unpkg.com/vue-material@beta"></script>
+		<script src="libs/vuematerial.js"></script>
 		<script src="js/components/simple_list.js"></script>
 		<script src="js/components/settings.js"></script>
 		<script src="js/main.js"></script>
