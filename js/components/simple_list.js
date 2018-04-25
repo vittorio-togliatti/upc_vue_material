@@ -38,5 +38,73 @@ created: function () {
          alert('Error121212: ' + e);  
        }  
      });
+    
+    
+//    var promise = $.ajax('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=58786ad096ac8bfe31522e77ee3e92f8');
+//          //al terminar la promesa:
+//          promise.done(function () {
+//              console.log('Promesa terminada');
+//          });
+//          // en otro sitio de la aplicación, cuando la promesa acabe:
+//          promise.done(function (retrievedData) {
+//              $('#contentPlaceholder').html(retrievedData);
+//
+//          //si la promesa falla:
+//          promise.fail(errorFunction);
+//          //independientemente de un fail o un done, se ejecutará siempre y después del done o del fail:
+//          promise.always(alwaysFunction);
+//          });
+    
+    
+    
+//    var promise = getPeliculas();
+//          //al terminar la promesa:
+//          promise.done(function (resp) {
+//              that.peliculas = resp.results;
+//              console.log('Promesa terminada');
+//          });
+//              
+//          //si la promesa falla:
+//          promise.fail(errorFunction);
+//          //independientemente de un fail o un done, se ejecutará siempre y después del done o del fail:
+//          promise.always(alwaysFunction);
+        
+    
+    
+    }
+};
+
+
+
+
+function getPeliculas() {
+    var deferred = $.Deferred();
+    
+    
+    $.ajax({  
+       type: "GET",  
+       url: "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=58786ad096ac8bfe31522e77ee3e92f8",  
+       dataType: "json",  
+       success: function(resp){  
+            deferred.resolve(resp);
+            console.log(JSON.stringify(resp.results));   
+       },  
+       error: function(e){  
+         alert('Error121212: ' + e);  
+       }  
+     });
+ 
+  return deferred.promise();
 }
-                     };
+
+function errorFunction() {
+    console.log('error logged');
+}
+
+function alwaysFunction() {
+    console.log('always logged');
+}
+
+    
+
+
