@@ -19,6 +19,10 @@ const SimpleListTemplate = {props: [],
   <li v-for="item in shoppingItems">
     {{ item.name }} - {{ item.price }}
   </li>
+
+<li v-for="peli in peliculas">
+    {{ peli.title }} - {{ peli.original_language }}
+  </li>
 </ul>
 
 `,
@@ -45,15 +49,12 @@ created: function () {
 //          promise.done(function () {
 //              console.log('Promesa terminada');
 //          });
-//          // en otro sitio de la aplicación, cuando la promesa acabe:
-//          promise.done(function (retrievedData) {
-//              $('#contentPlaceholder').html(retrievedData);
 //
 //          //si la promesa falla:
 //          promise.fail(errorFunction);
 //          //independientemente de un fail o un done, se ejecutará siempre y después del done o del fail:
 //          promise.always(alwaysFunction);
-//          });
+          
     
     
     
